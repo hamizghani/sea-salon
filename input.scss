@@ -1,0 +1,354 @@
+$primary-color: #A40A0A;
+$secondary-color: #f14545;
+$third-color: #af2222;
+$accent-color: #b12727;
+$text-color: #EBE9FC;
+$fourth-color: rgb(235, 235, 235);
+$background-color: #0A0000;
+$first-font: 'Lobster';
+$second-font: 'Playfair Display';
+$third-font: 'Josefin Sans';
+$fourth-font: 'Dancing Script';
+$fifth-font: 'Comfortaa';
+
+@mixin flex($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+
+body {
+    background-color: $background-color;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#navbar {
+    @include flex(row);
+    background-color: $text-color;
+    align-items: center;
+    padding: 20px 35px 20px 130px;
+    #brand {
+        h1 {
+            font-family: $first-font;
+            letter-spacing: 2px;
+            font-size: 30px;
+            color: $primary-color;
+        }
+        h1:hover {
+            cursor: pointer;
+        }
+    }
+    #navMenu {
+        @include flex(row);
+        margin: 0 0 0 30%;
+        list-style-type: none;
+        li {
+            font-family: $third-font;
+            font-size: 20px;
+            font-weight: 350;
+            margin: 0 20px;
+        }
+        li:hover {
+            cursor: pointer;
+            color: $accent-color;
+        }
+    }
+}
+
+#homepage {
+    @include flex(column);
+    width: 100%; height: 650px;
+    justify-content: center;
+    background-image: url(img-5.jpeg);
+    background-position: top center;
+    background-position: 50% 30%;
+    background-size: cover;
+    .container1 {
+        background-color: white;
+        width: fit-content;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 0 0 0 125px;
+        #slogan {
+            line-height: 60px;
+            h1 {
+                letter-spacing: 2px;
+                font-size: 90px;
+                font-weight: 800;
+                font-family: $second-font;
+                color: $secondary-color;
+            }
+            h3 {
+                font-weight: 700;
+                color: $third-color;
+                font-size: 30px;
+                font-family: $second-font;
+            }
+            h2 {
+                margin: 30px 0 30px 0;
+                color: $third-color;
+                font-family: $fourth-font;
+                font-size: 90px;
+            }
+            @include flex(column);
+            width: fit-content;
+            height: fit-content;
+        }
+        p {
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            font-family: $fifth-font;
+            color: $background-color;
+        }
+        #buttonGroup-1 {
+            // background-color: red;
+            margin: 15px 0 0 0;
+            @include flex(row);
+            justify-content: space-evenly;
+            button {
+                @include flex(column);
+                justify-content: center;
+                align-items: center;
+                padding: 2px 0 0 0;
+                color: $primary-color;
+                width: 45%; height: 30px;
+                font-weight: 900;
+                font-family: $third-font;
+                background-color: transparent;
+                border-radius: 5px;
+                border: 1px solid black;
+            }
+            button:hover {
+                cursor: pointer;
+                color: $text-color;
+                border-color: $secondary-color;
+                background-color: $secondary-color;
+            }
+        }
+    }
+}
+
+#services {
+    @include flex(column);
+    width: 100%; height: fit-content;
+    padding: 80px 0 60px 0;
+    background-color: $fourth-color;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-family: $second-font;
+        font-size: 50px;
+        color: $third-color;
+        margin: 0 0 40px 0;
+    }
+    #container2 {
+        @include flex(row);
+        width: 100%;
+        height: 550px;
+        justify-content: space-evenly;
+        .servicesContainer {
+            @include flex(column);
+            background-color: rgb(245, 245, 245);
+            border-radius: 20px;
+            padding: 20px;
+            width: 25%; height: auto;
+            .servicesImgContainer {
+                border-radius: 20px;
+                width: 100%;
+                height: 40%;
+            }
+            @mixin servicesImg($img-src) {
+                background-image: url(#{$img-src});
+                background-size: cover;
+                background-position: center;
+            }
+            #servicesImg1 {
+                @include servicesImg('img-4.jpeg');
+            }
+            #servicesImg2 {
+                @include servicesImg('img-6.jpg');
+            }
+            #servicesImg3 {
+                @include servicesImg('img-7.jpg');
+            }
+            
+            .servicesTextContainer {
+                @include flex(column);
+                margin: 30px 0 0 0;
+                width: 100%;
+                height: 45%;
+                p {
+                    margin: 10px 0 0px 0;
+                    font-family: $fifth-font;
+                }
+                h2 {
+                    font-family: $second-font;
+                }
+            }
+            button {
+                @include flex(column);
+                justify-content: center;
+                align-items: center;
+                padding: 2px 0 0 0;
+                color: $text-color;
+                width: 45%; height: 40px;
+                font-weight: 900;
+                font-family: $third-font;
+                background-color: $secondary-color;
+                border-radius: 5px;
+                border: 1px solid $secondary-color;
+            }
+            button:hover {
+                cursor: pointer;
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+#review {
+    @include flex(row);
+    justify-content: center;
+    width: 100%; height: 600px;
+    background-color:#ff9898;
+    #container {
+        @include flex(row);
+        width: 80%;  height: 100%;
+        // background-color: red;
+        #reviewForm{
+            @include flex(column);
+            width: 40%; height: 100%;
+            align-items: center;
+            justify-content: center;
+            // background-color: green;
+            h1 {
+                font-family: $second-font;
+                margin: -150px 0 50px 0;
+                color: rgb(182, 0, 0);
+                font-size: 50px;
+            }
+            form {
+                @include flex(column);
+                // align-items: center;
+            }
+        }
+        #reviewList {
+            flex: 1;
+            @include flex(column);
+            align-items: center;
+            justify-content: center;
+            .reviewCard {
+                height: 150px; width: 80%;
+                background-color: rgb(255, 255, 255);
+                margin: 30px 0 0 0;
+                border-radius: 20px;
+            }
+
+        }
+    }
+}
+
+#contact {
+    @include flex(row);
+    padding: 80px 0;
+    justify-content: center;
+    width: 100%; height: 450px;
+    background-color: rgb(247, 247, 247);
+    #contactUsContainer {
+        // background-color: red;
+        width: 80%; height: 100%;
+        @include flex(row);
+        justify-content: center;
+        #contactUsImg {
+            border-radius: 20px;
+            background-image: url(img-8.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-position: 100% 30%;
+            width: 40%; height: 100%;
+        }
+        #contactUsContent {
+            margin: 15px 0 0 50px;
+            @include flex(column);
+            h1 {
+                font-family: $second-font;
+                font-size: 50px;
+            }
+            p {
+                font-family: $fifth-font;
+                font-size: 20px;
+                span {
+                    font-family: $first-font;
+                    font-size: 25px;
+                    color: $primary-color;
+                }
+            }
+            #contactNumber {
+                margin: 0 0 0 0;
+                h2 {
+                    margin: 20px 0 0 0;
+                    font-family: $fourth-font;
+                    color: $third-color;
+                    font-weight: 800;
+                    font-size: 40px;
+                }
+                h3 {
+                    margin: 10px 0 0 0;
+                    font-family: $third-font;
+                    font-weight: 800;
+                    font-size: 25px;
+                }
+                button {
+                    margin: 5px 0 0 0;
+                    @include flex(column);
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2px 0 0 0;
+                    color: $text-color;
+                    width: 25%; height: 40px;
+                    font-weight: 900;
+                    font-family: $third-font;
+                    background-color: $accent-color;
+                    border-radius: 5px;
+                    border: 1px solid $accent-color;
+                }
+                button:hover {
+                    opacity: 0.9;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+#footy {
+    @include flex(row);
+    align-items: center;
+    max-width: 100%; height: fit-content;
+    padding: 15px;
+    #brand {
+        @include flex(column);
+        margin: 0 0 0 50px;
+        justify-content: center;
+        h1 {
+            color: $text-color;
+            font-family: $first-font;
+            font-size: 30px;
+        }
+        p {
+            margin: -5px 0 0 10px;
+            color:$text-color;
+            font-size: 20px;
+            font-family: $fourth-font;
+            span {
+                font-size: 15px;
+                font-family: $third-font;
+            }
+        }
+    }
+}
+
+

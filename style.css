@@ -1,0 +1,364 @@
+body {
+  background-color: #0A0000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: #EBE9FC;
+  align-items: center;
+  padding: 20px 35px 20px 130px;
+}
+#navbar #brand h1 {
+  font-family: "Lobster";
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: #A40A0A;
+}
+#navbar #brand h1:hover {
+  cursor: pointer;
+}
+#navbar #navMenu {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 30%;
+  list-style-type: none;
+}
+#navbar #navMenu li {
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  font-weight: 350;
+  margin: 0 20px;
+}
+#navbar #navMenu li:hover {
+  cursor: pointer;
+  color: #b12727;
+}
+
+#homepage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 650px;
+  justify-content: center;
+  background-image: url(img-5.jpeg);
+  background-position: top center;
+  background-position: 50% 30%;
+  background-size: cover;
+}
+#homepage .container1 {
+  background-color: white;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0 0 0 125px;
+}
+#homepage .container1 #slogan {
+  line-height: 60px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+}
+#homepage .container1 #slogan h1 {
+  letter-spacing: 2px;
+  font-size: 90px;
+  font-weight: 800;
+  font-family: "Playfair Display";
+  color: #f14545;
+}
+#homepage .container1 #slogan h3 {
+  font-weight: 700;
+  color: #af2222;
+  font-size: 30px;
+  font-family: "Playfair Display";
+}
+#homepage .container1 #slogan h2 {
+  margin: 30px 0 30px 0;
+  color: #af2222;
+  font-family: "Dancing Script";
+  font-size: 90px;
+}
+#homepage .container1 p {
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  font-family: "Comfortaa";
+  color: #0A0000;
+}
+#homepage .container1 #buttonGroup-1 {
+  margin: 15px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#homepage .container1 #buttonGroup-1 button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 0 0 0;
+  color: #A40A0A;
+  width: 45%;
+  height: 30px;
+  font-weight: 900;
+  font-family: "Josefin Sans";
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+#homepage .container1 #buttonGroup-1 button:hover {
+  cursor: pointer;
+  color: #EBE9FC;
+  border-color: #f14545;
+  background-color: #f14545;
+}
+
+#services {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding: 80px 0 60px 0;
+  background-color: rgb(235, 235, 235);
+  justify-content: center;
+  align-items: center;
+}
+#services h1 {
+  font-family: "Playfair Display";
+  font-size: 50px;
+  color: #af2222;
+  margin: 0 0 40px 0;
+}
+#services #container2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 550px;
+  justify-content: space-evenly;
+}
+#services #container2 .servicesContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(245, 245, 245);
+  border-radius: 20px;
+  padding: 20px;
+  width: 25%;
+  height: auto;
+}
+#services #container2 .servicesContainer .servicesImgContainer {
+  border-radius: 20px;
+  width: 100%;
+  height: 40%;
+}
+#services #container2 .servicesContainer #servicesImg1 {
+  background-image: url(img-4.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+#services #container2 .servicesContainer #servicesImg2 {
+  background-image: url(img-6.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#services #container2 .servicesContainer #servicesImg3 {
+  background-image: url(img-7.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#services #container2 .servicesContainer .servicesTextContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0 0 0;
+  width: 100%;
+  height: 45%;
+}
+#services #container2 .servicesContainer .servicesTextContainer p {
+  margin: 10px 0 0px 0;
+  font-family: "Comfortaa";
+}
+#services #container2 .servicesContainer .servicesTextContainer h2 {
+  font-family: "Playfair Display";
+}
+#services #container2 .servicesContainer button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 0 0 0;
+  color: #EBE9FC;
+  width: 45%;
+  height: 40px;
+  font-weight: 900;
+  font-family: "Josefin Sans";
+  background-color: #f14545;
+  border-radius: 5px;
+  border: 1px solid #f14545;
+}
+#services #container2 .servicesContainer button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#review {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  background-color: #ff9898;
+}
+#review #container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 100%;
+}
+#review #container #reviewForm {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#review #container #reviewForm h1 {
+  font-family: "Playfair Display";
+  margin: -150px 0 50px 0;
+  color: rgb(182, 0, 0);
+  font-size: 50px;
+}
+#review #container #reviewForm form {
+  display: flex;
+  flex-direction: column;
+}
+#review #container #reviewList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#review #container #reviewList .reviewCard {
+  height: 150px;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  margin: 30px 0 0 0;
+  border-radius: 20px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  padding: 80px 0;
+  justify-content: center;
+  width: 100%;
+  height: 450px;
+  background-color: rgb(247, 247, 247);
+}
+#contact #contactUsContainer {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#contact #contactUsContainer #contactUsImg {
+  border-radius: 20px;
+  background-image: url(img-8.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-position: 100% 30%;
+  width: 40%;
+  height: 100%;
+}
+#contact #contactUsContainer #contactUsContent {
+  margin: 15px 0 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+#contact #contactUsContainer #contactUsContent h1 {
+  font-family: "Playfair Display";
+  font-size: 50px;
+}
+#contact #contactUsContainer #contactUsContent p {
+  font-family: "Comfortaa";
+  font-size: 20px;
+}
+#contact #contactUsContainer #contactUsContent p span {
+  font-family: "Lobster";
+  font-size: 25px;
+  color: #A40A0A;
+}
+#contact #contactUsContainer #contactUsContent #contactNumber {
+  margin: 0 0 0 0;
+}
+#contact #contactUsContainer #contactUsContent #contactNumber h2 {
+  margin: 20px 0 0 0;
+  font-family: "Dancing Script";
+  color: #af2222;
+  font-weight: 800;
+  font-size: 40px;
+}
+#contact #contactUsContainer #contactUsContent #contactNumber h3 {
+  margin: 10px 0 0 0;
+  font-family: "Josefin Sans";
+  font-weight: 800;
+  font-size: 25px;
+}
+#contact #contactUsContainer #contactUsContent #contactNumber button {
+  margin: 5px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 0 0 0;
+  color: #EBE9FC;
+  width: 25%;
+  height: 40px;
+  font-weight: 900;
+  font-family: "Josefin Sans";
+  background-color: #b12727;
+  border-radius: 5px;
+  border: 1px solid #b12727;
+}
+#contact #contactUsContainer #contactUsContent #contactNumber button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#footy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 100%;
+  height: fit-content;
+  padding: 15px;
+}
+#footy #brand {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 50px;
+  justify-content: center;
+}
+#footy #brand h1 {
+  color: #EBE9FC;
+  font-family: "Lobster";
+  font-size: 30px;
+}
+#footy #brand p {
+  margin: -5px 0 0 10px;
+  color: #EBE9FC;
+  font-size: 20px;
+  font-family: "Dancing Script";
+}
+#footy #brand p span {
+  font-size: 15px;
+  font-family: "Josefin Sans";
+}
+
+/*# sourceMappingURL=style.css.map */
