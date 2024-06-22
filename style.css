@@ -229,12 +229,29 @@ body {
 #review #container #reviewForm h1 {
   font-family: "Playfair Display";
   margin: -150px 0 50px 0;
-  color: rgb(182, 0, 0);
+  color: rgb(0, 0, 0);
   font-size: 50px;
 }
 #review #container #reviewForm form {
   display: flex;
   flex-direction: column;
+  width: 80%;
+}
+#review #container #reviewForm form input {
+  margin: 0 0 30px 0;
+  background-color: transparent;
+  border-width: 0 0 2px 0;
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  height: 30px;
+}
+#review #container #reviewForm form textarea {
+  margin: 0 0 30px 0;
+  background-color: transparent;
+  border-width: 0 0 2px 0;
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  height: 100px;
 }
 #review #container #reviewList {
   flex: 1;
