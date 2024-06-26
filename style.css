@@ -1,381 +1,429 @@
-body {
-  background-color: #0A0000;
-}
-
-* {
-  padding: 0;
+body, html {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 #navbar {
   display: flex;
-  flex-direction: row;
-  background-color: #EBE9FC;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 35px 20px 130px;
+  padding: 20px 5%;
+  background-color: #EBE9FC;
+  color:  #b12727;
 }
+
 #navbar #brand h1 {
-  font-family: "Lobster";
-  letter-spacing: 2px;
-  font-size: 30px;
-  color: #A40A0A;
+  font-family: 'Lobster', cursive;
+  font-size: 24px;
 }
-#navbar #brand h1:hover {
+
+#navbar #menu-icon {
+  display: none;
+  font-size: 24px;
   cursor: pointer;
 }
+
 #navbar #navMenu {
   display: flex;
-  flex-direction: row;
-  margin: 0 0 0 30%;
-  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 #navbar #navMenu li {
-  font-family: "Josefin Sans";
-  font-size: 20px;
-  font-weight: 350;
-  margin: 0 20px;
+  margin-left: 20px;
 }
-#navbar #navMenu li:hover {
-  cursor: pointer;
-  color: #b12727;
+
+#navbar #navMenu li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#navbar #navMenu li a:hover {
+  color: #af2222;
+ 
 }
 
 #homepage {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 650px;
-  justify-content: center;
-  background-image: url(img-5.jpeg);
-  background-position: top center;
-  background-position: 50% 30%;
+  justify-content: flex-start; 
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+  background-image: url('img-5.jpeg');
   background-size: cover;
+  background-position: center;
 }
+
 #homepage .container1 {
-  background-color: white;
-  width: fit-content;
-  padding: 20px;
-  border-radius: 20px;
-  margin: 0 0 0 125px;
-}
-#homepage .container1 #slogan {
-  line-height: 60px;
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  height: fit-content;
+  align-items: flex-start; 
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 50%;
+  margin-left: 5%;
 }
+
+#homepage .container1 #slogan h1,
+#homepage .container1 #slogan h2,
+#homepage .container1 #slogan h3 {
+  margin: 0;
+  font-family: 'Lobster', cursive;
+}
+
 #homepage .container1 #slogan h1 {
   letter-spacing: 2px;
-  font-size: 90px;
+  font-size: 70px;
   font-weight: 800;
   font-family: "Playfair Display";
   color: #f14545;
 }
+
+#homepage .container1 #slogan h2 {
+  color: #af2222;
+  font-family: "Dancing Script";
+  font-size: 70px;
+}
+
 #homepage .container1 #slogan h3 {
   font-weight: 700;
   color: #af2222;
   font-size: 30px;
   font-family: "Playfair Display";
 }
-#homepage .container1 #slogan h2 {
-  margin: 30px 0 30px 0;
-  color: #af2222;
-  font-family: "Dancing Script";
-  font-size: 90px;
-}
+
 #homepage .container1 p {
-  font-weight: 900;
-  letter-spacing: 0.5px;
-  font-family: "Comfortaa";
-  color: #0A0000;
+  font-size: 20px;
+  text-align: left; /* Align text to the left */
 }
+
 #homepage .container1 #buttonGroup-1 {
-  margin: 15px 0 0 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  margin-top: 20px;
 }
+
 #homepage .container1 #buttonGroup-1 button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2px 0 0 0;
-  color: #A40A0A;
-  width: 45%;
-  height: 30px;
-  font-weight: 900;
-  font-family: "Josefin Sans";
-  background-color: transparent;
-  border-radius: 5px;
-  border: 1px solid black;
-}
-#homepage .container1 #buttonGroup-1 button:hover {
+  background-color: #b12727;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 20px;
+  margin: 0 10px;
   cursor: pointer;
-  color: #EBE9FC;
-  border-color: #f14545;
-  background-color: #f14545;
+  transition: background-color 0.3s ease;
+}
+
+#homepage .container1 #buttonGroup-1 button:hover {
+  background-color: #ff5733; /* Warna saat hover */
 }
 
 #services {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: fit-content;
-  padding: 80px 0 60px 0;
-  background-color: rgb(235, 235, 235);
-  justify-content: center;
   align-items: center;
+  padding: 50px 20px;
+  background-color: #EBEBEB;
 }
+
 #services h1 {
   font-family: "Playfair Display";
-  font-size: 50px;
+  font-size: 40px;
   color: #af2222;
   margin: 0 0 40px 0;
 }
+
 #services #container2 {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 550px;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
+
 #services #container2 .servicesContainer {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(245, 245, 245);
-  border-radius: 20px;
+  background-color: #F5F5F5;
   padding: 20px;
-  width: 25%;
-  height: auto;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 45%;
 }
-#services #container2 .servicesContainer .servicesImgContainer {
-  border-radius: 20px;
+
+#services #container2 .servicesImgContainer {
   width: 100%;
-  height: 40%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
+
+#services #container2 .servicesTextContainer {
+  text-align: left;
+  margin-top: 20px;
+}
+
+#services #container2 .servicesTextContainer h2 {
+  font-family: "Playfair Display";
+  font-size: 30px;
+  color: black;
+}
+
 #services #container2 .servicesContainer #servicesImg1 {
   background-image: url(img-4.jpeg);
   background-size: cover;
   background-position: center;
 }
+
 #services #container2 .servicesContainer #servicesImg2 {
   background-image: url(img-6.jpg);
   background-size: cover;
   background-position: center;
 }
+
 #services #container2 .servicesContainer #servicesImg3 {
   background-image: url(img-7.jpg);
   background-size: cover;
   background-position: center;
 }
-#services #container2 .servicesContainer .servicesTextContainer {
-  display: flex;
-  flex-direction: column;
-  margin: 30px 0 0 0;
-  width: 100%;
-  height: 45%;
-}
-#services #container2 .servicesContainer .servicesTextContainer p {
-  margin: 10px 0 0px 0;
+
+#services #container2 .servicesTextContainer p {
+  font-size: 18px;
   font-family: "Comfortaa";
 }
-#services #container2 .servicesContainer .servicesTextContainer h2 {
-  font-family: "Playfair Display";
-}
-#services #container2 .servicesContainer button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2px 0 0 0;
-  color: #EBE9FC;
-  width: 45%;
-  height: 40px;
-  font-weight: 900;
-  font-family: "Josefin Sans";
-  background-color: #f14545;
-  border-radius: 5px;
-  border: 1px solid #f14545;
-}
-#services #container2 .servicesContainer button:hover {
+
+#services #container2 button {
+  background-color: #b12727;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
-  opacity: 0.9;
+  transition: background-color 0.3s ease;
+}
+
+#services #container2 button:hover {
+  background-color: #ff5733; /* Warna saat hover */
 }
 
 #review {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  height: 600px;
-  background-color: #ff9898;
+  background-color: #FAFAFA;
+  padding: 50px 20px;
+  
 }
+
 #review #container {
   display: flex;
-  flex-direction: row;
-  width: 80%;
-  height: 100%;
-}
-#review #container #reviewForm {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  height: 100%;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  
 }
-#review #container #reviewForm h1 {
-  font-family: "Playfair Display";
-  margin: -150px 0 50px 0;
-  color: rgb(0, 0, 0);
-  font-size: 50px;
-}
-#review #container #reviewForm form {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-#review #container #reviewForm form input {
-  margin: 0 0 30px 0;
-  background-color: transparent;
-  border-width: 0 0 2px 0;
-  font-family: "Josefin Sans";
-  font-size: 20px;
-  height: 30px;
-}
-#review #container #reviewForm form textarea {
-  margin: 0 0 30px 0;
-  background-color: transparent;
-  border-width: 0 0 2px 0;
-  font-family: "Josefin Sans";
-  font-size: 20px;
-  height: 100px;
-}
-#review #container #reviewList {
+
+#review #reviewForm,
+#review #reviewList {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  min-width: 300px;
+  max-width: 45%;
+  padding: 20px;
 }
-#review #container #reviewList .reviewCard {
-  height: 150px;
-  width: 80%;
-  background-color: rgb(255, 255, 255);
-  margin: 30px 0 0 0;
-  border-radius: 20px;
+
+#review #reviewForm h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#review #reviewForm form input,
+#review #reviewForm form textarea,
+#review #reviewForm form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#review #reviewForm form button {
+  background-color: #b12727;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#review #reviewForm form button:hover {
+  background-color: #ff5733; /* Warna saat hover */
+}
+
+#review #reviewList .reviewCard {
+  background-color: #F5F5F5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#review #reviewList .reviewCard h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#review #reviewList .reviewCard p {
+  font-size: 18px;
+}
+
+.rating .star {
+  cursor: pointer;
+  font-size: 24px;
+  color: #ccc; /* warna default bintang */
+  transition: color 0.3s ease;
+}
+
+.rating .star:hover,
+.rating .star.selected {
+  color: gold;
+}
+
+.rating .star:hover ~ .star {
+  color: #ccc;
 }
 
 #contact {
-  display: flex;
-  flex-direction: row;
-  padding: 80px 0;
-  justify-content: center;
-  width: 100%;
-  height: 450px;
-  background-color: rgb(247, 247, 247);
+  padding: 50px 20px;
 }
+
 #contact #contactUsContainer {
-  width: 80%;
-  height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-#contact #contactUsContainer #contactUsImg {
-  border-radius: 20px;
-  background-image: url(img-8.jpeg);
+
+#contact #contactUsContainer > div {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+#contactUsImg {
+  flex: 1;
+  aspect-ratio: 16 / 9; 
+  background-image: url('img-5.jpeg');
   background-size: cover;
   background-position: center;
-  background-position: 100% 30%;
-  width: 40%;
-  height: 100%;
+  border-radius: 10px;
 }
-#contact #contactUsContainer #contactUsContent {
-  margin: 15px 0 0 50px;
-  display: flex;
-  flex-direction: column;
+
+@media screen and (max-width: 768px) {
+  #contactUsImg {
+    aspect-ratio: 16 / 9; 
+  }
 }
-#contact #contactUsContainer #contactUsContent h1 {
-  font-family: "Playfair Display";
-  font-size: 50px;
+
+#contact #contactUsContent h1,
+#contact #contactNumber h2 {
+  font-size: 30px;
 }
-#contact #contactUsContainer #contactUsContent p {
-  font-family: "Comfortaa";
+
+#contact #contactUsContent p,
+#contact #contactNumber h3 {
   font-size: 20px;
 }
-#contact #contactUsContainer #contactUsContent p span {
-  font-family: "Lobster";
-  font-size: 25px;
-  color: #A40A0A;
-}
-#contact #contactUsContainer #contactUsContent #contactNumber {
-  margin: 0 0 0 0;
-}
-#contact #contactUsContainer #contactUsContent #contactNumber h2 {
-  margin: 20px 0 0 0;
-  font-family: "Dancing Script";
-  color: #af2222;
-  font-weight: 800;
-  font-size: 40px;
-}
-#contact #contactUsContainer #contactUsContent #contactNumber h3 {
-  margin: 10px 0 0 0;
-  font-family: "Josefin Sans";
-  font-weight: 800;
-  font-size: 25px;
-}
-#contact #contactUsContainer #contactUsContent #contactNumber button {
-  margin: 5px 0 0 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2px 0 0 0;
-  color: #EBE9FC;
-  width: 25%;
-  height: 40px;
-  font-weight: 900;
-  font-family: "Josefin Sans";
+
+#contact #contactNumber button {
   background-color: #b12727;
-  border-radius: 5px;
-  border: 1px solid #b12727;
-}
-#contact #contactUsContainer #contactUsContent #contactNumber button:hover {
-  opacity: 0.9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact #contactNumber button:hover {
+  background-color: #ff5733; /* Warna saat hover */
 }
 
 #footy {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  max-width: 100%;
-  height: fit-content;
-  padding: 15px;
-}
-#footy #brand {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 0 50px;
-  justify-content: center;
-}
-#footy #brand h1 {
-  color: #EBE9FC;
-  font-family: "Lobster";
-  font-size: 30px;
-}
-#footy #brand p {
-  margin: -5px 0 0 10px;
-  color: #EBE9FC;
-  font-size: 20px;
-  font-family: "Dancing Script";
-}
-#footy #brand p span {
-  font-size: 15px;
-  font-family: "Josefin Sans";
+  background-color: #A40A0A;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-/*# sourceMappingURL=style.css.map */
+#footy #brand h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  #navbar #menu-icon {
+    display: block;
+  }
+
+  #navbar #navMenu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #EBE9FC;
+  }
+
+  #navbar #navMenu.show {
+    display: flex;
+  }
+
+  #navbar #navMenu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  #homepage .container1 {
+    max-width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  #services #container2 {
+    flex-direction: column;
+  }
+
+  #services #container2 .servicesContainer {
+    max-width: 100%;
+  }
+
+  #review #container {
+    flex-direction: column;
+   
+    align-items: center;
+  }
+
+  #contact #contactUsContainer {
+    flex-direction: column;
+  }
+}
+
+footer {
+  background-color: #EBE9FC;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
+footer .social-icons a {
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+footer .social-icons a:hover {
+  color: #f14545; /* Warna saat hover */
+}
